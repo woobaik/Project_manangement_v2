@@ -11,7 +11,8 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
+  <body class="bg-gray-100 font-sans w-full min-h-screen m-0">
+    <%= render 'layouts/navigation' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
