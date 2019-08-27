@@ -1,0 +1,14 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "max-w-xl mx-auto my-8 p-10 bg-white rounded shadow-xl bg-purple-200"}) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <p class="text-gray-800 font-medium text-center">Forgot your Password?</p>
+
+  <div class="mt-4">
+    <%= f.label :email, class: "block text-sm text-gray-600" %>
+    <%= f.email_field :email, autocomplete: "email", class:"w-full px-5  py-4 text-gray-700 bg-gray-200 rounded",placeholder: "Your Email" %>
+  </div>
+  
+  <div class="mt-4">
+    <%= f.submit 'Send Me Reset Password Instructions', class: "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded cursor-pointer" %>
+  </div>
+<% end %>
